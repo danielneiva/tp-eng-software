@@ -3,7 +3,7 @@ public class Copa {
 	protected int ano;
 	
 	
-	public void getAno() { return this.ano; }
+	public int getAno() { return this.ano; }
 	
-	public int setAno(int ano) { this.ano = ano; }
+	public void setAno(int ano) { this.ano = ano; }
 }
