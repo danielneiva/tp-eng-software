@@ -45,4 +45,44 @@ public class Partida {
 		this.golsEquipeDois = golsEquipeDois;
 	}
 	
+	private void  AcrescentaGolEquipeUm() {
+		golsEquipeUm += 1;
+		
+	}
+	
+	private void  AcrescentaGolEquipeDois() {
+		golsEquipeDois += 1;
+	}
+	
+	private void Resultado() {
+		if(golsEquipeUm > golsEquipeDois) {
+			equipeUm.AtualizaPontuacao(3);
+			
+			equipeUm.IncrementaVitoria();
+			equipeDois.IncrementaDerrota();
+			
+			equipeUm.AtualizaSaldoGols(golsEquipeUm, golsEquipeDois);
+			equipeDois.AtualizaSaldoGols(golsEquipeDois, golsEquipeUm);
+		}
+		else if(golsEquipeUm < golsEquipeDois) {
+			equipeDois.AtualizaPontuacao(3);
+			
+			equipeDois.IncrementaVitoria();
+			equipeUm.IncrementaDerrota();
+			
+			equipeUm.AtualizaSaldoGols(golsEquipeUm, golsEquipeDois);
+			equipeDois.AtualizaSaldoGols(golsEquipeDois, golsEquipeUm);
+		}
+		else {
+			equipeUm.IncrementaEmpate();
+			equipeDois.IncrementaEmpate();
+			
+			equipeUm.AtualizaPontuacao(1);
+			equipeDois.AtualizaPontuacao(1);
+			
+			equipeUm.AtualizaSaldoGols(golsEquipeUm, golsEquipeDois);
+			equipeDois.AtualizaSaldoGols(golsEquipeDois, golsEquipeUm);
+		}
+	}
+	
 }

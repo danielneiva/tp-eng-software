@@ -66,6 +66,31 @@ public class Equipe {
 		this.saldoGols = saldoGols;
 	}
 	
+	public void AtualizaPontuacao(int pontuacaoPartida) {
+		this.pontuacao += pontuacaoPartida;
+	}
+	
+	public void AtualizaSaldoGols(int golsMarcados, int golsSofridos) {
+		int saldoPartida = golsMarcados + golsSofridos;
+		
+		this.golsC += golsSofridos;
+		this.golsP += golsMarcados;
+		this.saldoGols = saldoPartida;
+		
+	}
+	
+	public void IncrementaEmpate() {
+		this.empates +=1;
+	}
+	
+	public void IncrementaVitoria() {
+		this.vitorias +=1;
+	}
+	
+	public  void IncrementaDerrota() {
+		this.derrotas +=1;
+	}
+
 	
 	
 }
