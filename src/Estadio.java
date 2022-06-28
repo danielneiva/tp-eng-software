@@ -16,4 +16,8 @@ public class Estadio {
 		this.nome = nome;
 	}
 	
+	public void ConsultarCidade() {
+		System.out.printf("%s", cidade.getNome());
+	}
+	
 }
